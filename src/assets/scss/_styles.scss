@@ -1,0 +1,110 @@
+@import './variables';
+
+* {
+    box-sizing: border-box;
+    font-family: Poopins;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  @mixin theme-colors($light-theme: true) {
+    @if $light-theme {
+      background-color: $white-color;
+      color: $black-color;
+    } @else {
+      background-color: $sec-color;
+      color: $white-color;
+      }
+  }
+
+  body {
+    @include theme-colors($light-theme: true);
+  }
+
+  $grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+  
+  @mixin generate-grid-columns($columns: 12, $gutter: .75rem) {
+    .column-container {
+      width: 100%;
+    }
+    .column-row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @for $i from 1 through $columns {
+      .column-#{$i} {
+        flex: 0 0 calc((100% / $columns) * $i);
+        max-width: calc((100% / $columns) * $i);
+        padding-inline: $gutter; 
+      }
+    }
+  
+    @each $key, $values in $grid-breakpoints {
+      @media only screen and (min-width: $values) {
+        @for $i from 1 through $columns {
+          .column-#{$key}-#{$i} {
+            flex: 0 0 calc((100% / $columns) * $i);
+            max-width: calc((100% / $columns) * $i);
+            padding-inline: $gutter; 
+          }
+        }
+      }
+  }
+
+  @each $key, $values in $grid-breakpoints {
+    @media only screen and (max-width: 575px) {
+      @for $i from 1 through $columns {
+        .column-#{$key}-#{$i} {
+          flex: 0 0 100%;
+          max-width: 100%;
+          padding-inline: $gutter; 
+        }
+      }
+    }
+  }
+}
+  
+@include generate-grid-columns();
+
+h1 {
+    font-size: $h1;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  text-align: start;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
