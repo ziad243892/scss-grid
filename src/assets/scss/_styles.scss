@@ -8,6 +8,8 @@
   body {
     margin: 0;
     padding: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
   }
 
   @mixin theme-colors($light-theme: true) {
@@ -20,9 +22,17 @@
       }
   }
 
-  body {
-    @include theme-colors($light-theme: true);
+
+  :root {
+    --color-text: #{$black-color};
+    --color-bg: #{$white-color};
   }
+  
+  [data-theme="dark"] {
+    --color-text: #{$white-color};
+    --color-bg: #{$sec-color};
+  }
+
 
   $grid-breakpoints: (
     xs: 0,
@@ -45,7 +55,7 @@
     @for $i from 1 through $columns {
       .column-#{$i} {
         flex: 0 0 calc((100% / $columns) * $i);
-        max-width: calc((100% / $columns) * $i);
+        width: calc((100% / $columns) * $i);
         padding-inline: $gutter; 
       }
     }
@@ -55,7 +65,7 @@
         @for $i from 1 through $columns {
           .column-#{$key}-#{$i} {
             flex: 0 0 calc((100% / $columns) * $i);
-            max-width: calc((100% / $columns) * $i);
+            width: calc((100% / $columns) * $i);
             padding-inline: $gutter; 
           }
         }
@@ -67,7 +77,7 @@
       @for $i from 1 through $columns {
         .column-#{$key}-#{$i} {
           flex: 0 0 100%;
-          max-width: 100%;
+          width: 100%;
           padding-inline: $gutter; 
         }
       }
@@ -107,4 +117,29 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.gap-18 {
+  gap: 18px;
+  position: relative;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
