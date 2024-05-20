@@ -13,6 +13,22 @@
         top: 3px;
         width: 2px;
         height: 12px;
-        background-color: $sep-color;
+        background-color: var(--sep-color)
+    }
+}
+
+.dark-mode {
+    &::before {
+        content: 'Dark';
+    }
+}
+
+::ng-deep {
+    .dark {
+        .dark-mode {
+            &::before {
+                content: 'Light';
+            }
+        }
     }
 }
