@@ -12,17 +12,6 @@
     color: var(--color-text);
   }
 
-  @mixin theme-colors($light-theme: true) {
-    @if $light-theme {
-      background-color: $white-color;
-      color: $black-color;
-    } @else {
-      background-color: $sec-color;
-      color: $white-color;
-      }
-  }
-
-
   :root {
     --color-text: #{$black-color};
     --color-bg: #{$white-color};
@@ -32,7 +21,6 @@
     --color-text: #{$white-color};
     --color-bg: #{$sec-color};
   }
-
 
   $grid-breakpoints: (
     xs: 0,
@@ -142,4 +130,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.hover-underline {
+  &:hover {
+    text-decoration: underline;
+  }
 }

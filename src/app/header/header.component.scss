@@ -16,3 +16,19 @@
         background-color: $sep-color;
     }
 }
+
+.links {
+    p{
+    transition: all .3s;
+    &:hover {
+        color: $primary-color;
+    }
+}
+}
+
+.material-icons {
+    font-size: 14px;
+    position: relative;
+    top: 2px;
+    margin-inline-end: 6px;
+}
