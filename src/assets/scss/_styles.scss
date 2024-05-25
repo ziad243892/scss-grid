@@ -7,19 +7,22 @@
   
   body {
     margin: 0;
-    padding: 0;
+    padding: 0; 
     background-color: var(--color-bg);
     color: var(--color-text);
+    transition: all .3s;
   }
 
   :root {
     --color-text: #{$black-color};
     --color-bg: #{$white-color};
+    --sep-color: #{$sep-color};
   }
   
   [data-theme="dark"] {
     --color-text: #{$white-color};
     --color-bg: #{$sec-color};
+    --sep-color: #{$white-color};
   }
 
   $grid-breakpoints: (
@@ -109,6 +112,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 .justify-content-between {
   justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
 }
 
 .fw-bold {
