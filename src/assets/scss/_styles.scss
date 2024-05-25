@@ -124,11 +124,14 @@ h1, h2, h3, h4, h5, h6, p {
 
 .gap-18 {
   gap: 18px;
-  position: relative;
 }
 
 .position-relative {
   position: relative;
+}
+
+.m-0 {
+  margin: 0;
 }
 
 .mx-auto {
@@ -139,8 +142,3 @@ h1, h2, h3, h4, h5, h6, p {
   cursor: pointer;
 }
 
-.hover-underline {
-  &:hover {
-    text-decoration: underline;
-  }
-}

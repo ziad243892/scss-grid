@@ -15,7 +15,7 @@
     font-weight: bold;
 }
 
-*:not(.material-icons) {
+*:not(.material-icons, .fa, .fa-brands, .fa-classic, .fa-regular, .fa-sharp, .fa-solid, .fab, .far, .fas) {
     font-family: 'Poppins';
   }
 
