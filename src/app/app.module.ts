@@ -1,6 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { BrowserModule } from '@angular/platform-browser';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+
+import { AppComponent } from './app.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
@@ -34,64 +42,89 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
-@NgModule( {
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    MatDatepickerModule,
+    HttpClient,
+    HttpClientModule
+  ],
   imports: [
-      CommonModule,
-      BrowserAnimationsModule,
-      MatCheckboxModule,
-      MatCheckboxModule,
-      MatButtonModule,
-      MatInputModule,
-      MatAutocompleteModule,
-      MatDatepickerModule,
-      MatFormFieldModule,
-      MatRadioModule,
-      MatSelectModule,
-      MatSliderModule,
-      MatSlideToggleModule,
-      MatMenuModule,
-      MatSidenavModule,
-      MatBadgeModule,
-      MatToolbarModule,
-      MatListModule,
-      MatGridListModule,
-      MatCardModule,
-      MatStepperModule,
-      MatTabsModule,
-      MatExpansionModule,
-      MatButtonToggleModule,
-      MatChipsModule,
-      MatIconModule,
-      MatProgressSpinnerModule,
-      MatProgressBarModule,
-      MatDialogModule,
-      MatTooltipModule,
-      MatSnackBarModule,
-      MatTableModule,
-      MatSortModule,
-      MatPaginatorModule
+    CommonModule,
+    BrowserAnimationsModule,
+    MatCheckboxModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatBadgeModule,
+    MatToolbarModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatStepperModule,
+    MatTabsModule,
+    MatExpansionModule,
+    MatButtonToggleModule,
+    MatChipsModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatDialogModule,
+    MatTooltipModule,
+    MatSnackBarModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+
+    BrowserModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'en',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+
   ],
   exports: [
-      MatButtonModule,
-      MatToolbarModule,
-      MatIconModule,
-      MatSidenavModule,
-      MatBadgeModule,
-      MatListModule,
-      MatGridListModule,
-      MatInputModule,
-      MatFormFieldModule,
-      MatSelectModule,
-      MatRadioModule,
-      MatDatepickerModule,
-      MatChipsModule,
-      MatTooltipModule,
-      MatTableModule,
-      MatPaginatorModule
-  ],
-  providers: [
-      MatDatepickerModule,
-  ]
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatBadgeModule,
+    MatListModule,
+    MatGridListModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatChipsModule,
+    MatTooltipModule,
+    MatTableModule,
+    MatPaginatorModule,
+    CommonModule,
+    TranslateModule,
+    BrowserModule,
+    HttpClientModule,
+],
+providers: [],
+bootstrap: [AppComponent]
 })
 
-export class MaterialModule { }
+export class AppModuleModule { }

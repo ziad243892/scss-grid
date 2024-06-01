@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "scss-project": {
+    "Wanderlust-Wings": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/scss-project",
+            "outputPath": "dist/Wanderlust-Wings",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "scss-project:build:production"
+              "buildTarget": "Wanderlust-Wings:build:production"
             },
             "development": {
-              "buildTarget": "scss-project:build:development"
+              "buildTarget": "Wanderlust-Wings:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -70,7 +70,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "scss-project:build"
+            "buildTarget": "Wanderlust-Wings:build"
           }
         },
         "test": {
