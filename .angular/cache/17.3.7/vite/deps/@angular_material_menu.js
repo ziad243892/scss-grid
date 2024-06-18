@@ -22,18 +22,18 @@ import {
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader,
   normalizePassiveListenerOptions
-} from "./chunk-EREPK7UY.js";
+} from "./chunk-WKKAGHYL.js";
 import {
   animate,
   state,
   style,
   transition,
   trigger
-} from "./chunk-GFSJO5SC.js";
+} from "./chunk-7WKR6O7M.js";
 import {
   CommonModule,
   DOCUMENT
-} from "./chunk-5U3HUD7B.js";
+} from "./chunk-3O6PYYFM.js";
 import {
   ApplicationRef,
   ChangeDetectionStrategy,
@@ -106,7 +106,7 @@ import {
   ɵɵrestoreView,
   ɵɵtemplate,
   ɵɵviewQuery
-} from "./chunk-AYVB4LE2.js";
+} from "./chunk-OYKVRCAP.js";
 
 // node_modules/@angular/material/fesm2022/menu.mjs
 var _c0 = ["mat-menu-item", ""];
