@@ -2,7 +2,6 @@
 
 * {
     box-sizing: border-box;
-    font-family: Poopins;
   }
   
   body {
@@ -144,3 +143,18 @@ h1, h2, h3, h4, h5, h6, p {
   cursor: pointer;
 }
 
+.p-start-0 {
+  padding-inline-start: 0;
+}
+
+.p-end-0 {
+  padding-inline-end: 0;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.border-top-0 {
+  border-top: 0px solid !important;
+} 

@@ -6,7 +6,6 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -88,7 +87,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-
     BrowserModule,
     HttpClientModule,
     TranslateModule.forRoot({
@@ -99,7 +97,6 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient],
       },
     }),
-
   ],
   exports: [
     MatButtonModule,
@@ -121,7 +118,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     CommonModule,
     TranslateModule,
     BrowserModule,
-    HttpClientModule,
+    HttpClientModule
 ],
 providers: [],
 bootstrap: [AppComponent]

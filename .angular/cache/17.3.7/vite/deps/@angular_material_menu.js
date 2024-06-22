@@ -1,4 +1,9 @@
 import {
+  Overlay,
+  OverlayConfig,
+  OverlayModule
+} from "./chunk-Y5K3WE56.js";
+import {
   CdkScrollableModule,
   DOWN_ARROW,
   Directionality,
@@ -11,9 +16,6 @@ import {
   MatCommonModule,
   MatRipple,
   MatRippleModule,
-  Overlay,
-  OverlayConfig,
-  OverlayModule,
   RIGHT_ARROW,
   SPACE,
   TemplatePortal,
@@ -22,18 +24,18 @@ import {
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader,
   normalizePassiveListenerOptions
-} from "./chunk-WKKAGHYL.js";
+} from "./chunk-QW6AVWVG.js";
 import {
   animate,
   state,
   style,
   transition,
   trigger
-} from "./chunk-7WKR6O7M.js";
+} from "./chunk-OLYWPGIE.js";
 import {
   CommonModule,
   DOCUMENT
-} from "./chunk-3O6PYYFM.js";
+} from "./chunk-HL22NBV6.js";
 import {
   ApplicationRef,
   ChangeDetectionStrategy,
@@ -106,7 +108,7 @@ import {
   ɵɵrestoreView,
   ɵɵtemplate,
   ɵɵviewQuery
-} from "./chunk-OYKVRCAP.js";
+} from "./chunk-JHK5IJ44.js";
 
 // node_modules/@angular/material/fesm2022/menu.mjs
 var _c0 = ["mat-menu-item", ""];

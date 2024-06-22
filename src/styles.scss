@@ -14,3 +14,29 @@
         }
     }
 }
+
+body {
+    .mat-mdc-tab {
+        border: 1px solid $border-color;
+        margin-inline: 5px;
+        .mdc-tab-indicator__content--underline {
+            border-color: $primary-color !important;
+            height: 8px;
+            background-color: $primary-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &::after {
+                content: "\e5c7";
+                font-family: "Material Icons";
+                font-size: 24px;
+                position: relative;
+                top: -7px;
+                color: $primary-color;
+            }
+        }
+    }
+    .mat-mdc-tab-body  {
+            margin-top: 50px;
+    }
+}
