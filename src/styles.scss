@@ -40,3 +40,25 @@ body {
             margin-top: 50px;
     }
 }
+
+.btn-primary {
+    height: 39px;
+    padding-inline: 27px;
+    background-color: $primary-color;
+    color: $white-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    transition: all .3s;
+    cursor: pointer;
+    border: 0px;
+    &:hover {
+        background-color: $sec-color;
+    }
+    .material-icons {
+        font-size: 18px;
+        position: relative;
+        top: 4px;
+    }
+}
