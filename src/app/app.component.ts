@@ -4,11 +4,12 @@ import { HeaderComponent } from './header/header.component';
 import { SliderComponent } from './slider/slider.component';
 import { TranslateService } from '@ngx-translate/core';
 import { VideoPartComponent } from './video-part/video-part.component';
+import { TourSectionComponent } from './tour-section/tour-section.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, SliderComponent, VideoPartComponent],
+  imports: [RouterOutlet, HeaderComponent, SliderComponent, VideoPartComponent, TourSectionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

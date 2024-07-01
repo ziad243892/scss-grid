@@ -1,0 +1,172 @@
+@import '../../assets/scss/variables';
+
+h3 {
+    margin-top: 73px;
+}
+
+p {
+    font-size: 14px;
+    color: $sup-text;
+    margin-top: 5px;
+}
+
+.max-container-body {
+    max-width: 1170px;
+    margin-inline: auto;
+}
+
+.sep {
+    width: 170px;
+    height: 1px;
+    background-color: $border-color;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    margin-inline: auto;
+    &::after { 
+        content: "";
+        width: 70px;
+        height: 5px;
+        background-color: $primary-color;
+    }
+}
+
+.country {
+    margin-inline: auto;
+    margin-bottom: 30px;
+    &__pic {
+        width: 100%;
+        height: 302px;
+        display: flex;
+        justify-content: end;
+        flex-direction: column;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        &::before, &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &::after {
+            background-color: rgba($primary-color, .2);
+            z-index: 1;
+            transition: all .3s;
+        }
+
+        &::before {
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: all .3s;
+            z-index: 0;
+            background-image: inherit;
+        }
+
+        &:hover {
+            &::before {
+                transform: scale(1.2);
+            }
+            &::after {
+                background-color: rgba($primary-color, .5);
+            }
+        }
+
+        &--name, &--sub {
+            margin: 0;
+            z-index: 2;
+            text-shadow: 1px 2px $black-color;
+            color: $country-name;
+            font-weight: bold;
+            padding-inline: 25px;
+        }
+
+        &--name {
+            font-size: 16px;
+        }
+
+        &--sub {
+            font-size: 11px;
+            padding-bottom: 25px;
+        }
+        .w-100 {
+            height: 36px;
+            border-top: 1px solid $button-border;
+            z-index: 2;
+            font-size: 12px;
+            color: $country-name;
+        }
+    }
+    &__review {
+        height: 148px;
+        border: 1px solid $border-color;
+        display: flex;
+        padding-inline: 36px;
+        justify-content: space-between;
+        padding: 24px;
+        flex-direction: column;
+        .material-icons {
+            color: $primary-color;
+            font-size: 27px;
+        }
+        h5 {
+            font-size: 16px;
+            color: $black-color;
+        }
+        p {
+            font-size: 12px;
+            color: $sup-text;
+            margin-top: 0px;
+        }
+    }
+    &__more {
+        height: 61px;
+        border: 1px solid $border-color;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all .3s;
+        .material-icons {
+            font-size: 14px;
+            margin-inline-start: 5px;
+            transition: all .3s;
+        }
+        &:hover {
+            color: $primary-color;
+            .material-icons {
+                color: $primary-color;
+                margin-inline-start: 10px;
+            }
+
+        }
+    }
+}
+
+.b-e {
+    border-inline-end: 1px solid $button-border;
+}
+
+button {
+    display: block;
+    margin-inline: auto;
+    margin-bottom: 30px;
+}
+
+.pin-drop {
+    top: 6px;
+}
+
+.hotel-icons {
+    justify-content: space-between;
+    div {
+        width: 40px;
+        height: 40px;
+        border: 1px solid $border-color;
+        cursor: pointer;
+        span {
+            color: $sup-text;
+            font-size: 28px;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+<h3 class="text-center">BOOK NOW BY CATEGORIES</h3>
+<p class="text-center">Explore Categories & Book Your Perfect, We Have Something for Everyone</p>
+<div class="sep d-center"></div>
+<div class="max-container-body">
+<mat-tab-group>
+    <mat-tab label="HOTELS">
+      <section class="column-container">
+        <div class="column-row">
+      <div class="column-md-4" *ngFor="let hotel of hotels">
+        <section class="country">
+             <div class="country__pic" [ngStyle]="{'background-image': 'url(' + hotel.image + ')'}">
+              <p class="country__pic--sub"><span class="material-icons position-relative pin-drop">pin_drop</span>{{ hotel.location }}</p>
+             </div>
+             <div class="country__review">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h5>{{hotel.name}}</h5>
+                  <p>({{hotel.rating}} Rating)</p>
+                </div>
+                <app-star-rating></app-star-rating>
+              </div>
+              <div class="d-flex hotel-icons">
+                <div class="d-center" matTooltip="Wifi"><span class="material-icons">wifi</span></div>
+                <div class="d-center" matTooltip="Swimming pool"><span class="material-icons">pool</span></div>
+                <div class="d-center" matTooltip="GYM"><span class="material-icons">fitness_center</span></div>
+                <div class="d-center" matTooltip="Restaurant"><span class="material-icons">restaurant</span></div>
+                <div class="d-center" matTooltip="TV"><span class="material-icons">live_tv</span></div>
+                <div class="d-center" matTooltip="Refrigerator"><span class="material-icons">kitchen</span></div>
+              </div>
+             </div>
+
+             <div class="d-flex w-100">
+              <div class="country__more d-center border-top-0 w-100">
+                Book Now
+                <span class="material-icons">double_arrow</span>
+              </div>
+
+              <div class="country__more d-center border-top-0 w-100">
+               View More
+                <span class="material-icons">double_arrow</span>
+              </div>
+
+             </div>
+
+
+
+        </section>
+
+      </div>
+                </div>
+                </section>
+    </mat-tab>
+    <mat-tab label="PACKAGES"></mat-tab>
+    <mat-tab label="FLIGHTS"></mat-tab>
+  </mat-tab-group>
+</div> 

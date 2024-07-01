@@ -1,6 +1,5 @@
-
 window.addEventListener("DOMContentLoaded",() => {
-	const starRating = new StarRating("form");
+      const starRatinghotel = new StarRating("form");
 });
 
 class StarRating {
